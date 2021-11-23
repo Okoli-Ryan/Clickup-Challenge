@@ -1,0 +1,19 @@
+@import "global";
+
+.section {
+
+    padding: 1rem;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: max-content;
+
+    .inner {
+        background-color: $primary;
+        height: 100px;
+        font-family: Helvetica;
+    }
+}
+
+p {
+    font-family: Avenir;
+}
