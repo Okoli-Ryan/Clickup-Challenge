@@ -1,12 +1,56 @@
-$primary: teal;
-$secondary: purple;
+$color-1: #4b5d68;
+$color-2: #212353;
+$color-3: #9c69e2;
+$color-4: #f063b8;
+$color-5: #68c9ba;
 
-@font-face {
-    font-family: "Avenir";
-    src: url("../fonts/AvenirLTStd-Book.otf");
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: #f6fafd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
 }
 
 @font-face {
-    font-family: "Helvetica";
-    src: url("../fonts/Helvetica-Bold.ttf");
+  font-family: "Avenir";
+  src: url("../fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Bold.ttf");
+}
+
+@mixin avenir {
+  font-family: Avenir;
+}
+
+@mixin helvi {
+  font-family: Helvetica;
+}
+
+@mixin padding {
+  padding: 2rem 12rem;
+}
+
+p {
+  color: $color-1;
+  @include avenir;
+}
+
+h1,
+h2,
+h3 {
+  color: $color-2;
+  @include helvi;
 }

@@ -5,7 +5,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/app/index.js"),
-  mode: "production",
+  mode: "development",
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
+  devServer: {
+    hot: true,
+  },
   plugins: [
     new MiniCssExtractPlugin({ filename: "/styles/[name].css" }),
     new CleanWebpackPlugin(),
