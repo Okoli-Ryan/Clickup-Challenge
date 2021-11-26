@@ -6,7 +6,6 @@
   align-items: center;
 }
 
-
 .logo {
   float: left;
   display: flex;
@@ -40,11 +39,11 @@
 
     a {
       text-decoration: none;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       font-size: 16px;
       color: $color-1;
       &.active {
-          color: $color-2;
+        color: $color-2;
         font-weight: 800;
       }
     }
@@ -61,11 +60,18 @@
   &__regular {
     padding: 1rem 2.5rem;
   }
-  
+
+  &__clear {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0
+  }
+
   & > span {
     font-weight: 800;
   }
-  
+
   &__light {
     background-color: white;
   }
@@ -74,7 +80,7 @@
     background-color: $color-3;
     color: #fff;
   }
-  
+
   &__nav {
     float: right;
     padding: 1rem 1.5rem;
@@ -84,6 +90,10 @@
     width: 20px;
     height: 20px;
     margin-left: 1rem;
+  }
+
+  &__feature {
+    margin-top: auto;
   }
 }
 
@@ -114,7 +124,7 @@
     width: 55%;
     @include avenir;
   }
-  
+
   &__image {
     height: 100%;
     width: 100%;
@@ -127,18 +137,15 @@
       height: calc(100% - 5rem);
     }
   }
-
 }
 
-.main {
+.section {
   width: 100%;
   margin-top: 5rem;
   @include padding;
-
 }
 
 .desc {
-
   &__container {
     display: flex;
     width: 100%;
@@ -172,13 +179,107 @@
       line-height: 130%;
     }
 
-    p{
+    p {
       font-size: 1rem;
       line-height: 160%;
     }
   }
+}
 
+.features__heading {
+  margin-top: 5rem;
+
+  & > h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  & > p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 55%;
+  }
+}
+
+.features {
+  margin-top: 3rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  &__feature {
+    flex-basis: 50%;
+    position: relative;
+    display: flex;
+    margin-top: 1rem;
+    width: 50%;
+    padding: .5rem 2rem;
+    position: relative;
+
+    svg{
+      width: calc(100% - 2rem);
+      height: calc(100% - 1rem);
+      position: absolute
+    }
+  }
+
+  &__text {
+
+    &-header {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      line-height: 31.2px;
+
+    }
+
+    &-body{
+      font-size: .9rem;
+      line-height: 25.6px;
+      margin-top: 2rem;
+    }
+
+    &-container {
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 65%;
+      height: 100%;
+      padding-bottom: 2rem; 
+      padding-right: 3rem; 
+      
+      top: 0;
+    }
+  }
+
+  &__image-container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 5rem;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+
+    }
+  }
 
 }
 
+.testimonials {
+  margin-top: 5rem;
+  width: 100%;
+}
 
+.a {
+  background-color: red;
+}
