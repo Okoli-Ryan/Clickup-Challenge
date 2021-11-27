@@ -4,6 +4,14 @@ $color-3: #9c69e2;
 $color-4: #f063b8;
 $color-5: #68c9ba;
 
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
 body {
   font-size: 14px;
   margin: 0;
@@ -48,9 +56,19 @@ p {
   @include avenir;
 }
 
+a{
+  color: $color-1;
+      text-decoration: none;
+      @include avenir;
+}
+
+ul{
+  list-style: none;
+}
+
 h1,
 h2,
-h3 {
+h3,h4 {
   color: $color-2;
   @include helvi;
 }
