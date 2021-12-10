@@ -14,3 +14,4 @@ import "../images/man.jpg";
 import "../images/woman.jpg";
 import "../fonts/AvenirLTStd-Book.otf";
 import "../fonts/Helvetica-Bold.ttf";
+import "./slider";

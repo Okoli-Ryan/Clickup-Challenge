@@ -4,8 +4,8 @@ $color-3: #9c69e2;
 $color-4: #f063b8;
 $color-5: #68c9ba;
 
-.ml-2 {
-  margin-left: 2rem;
+.mr-2 {
+  margin-right: 2rem;
 }
 
 .fw-900 {
@@ -13,9 +13,10 @@ $color-5: #68c9ba;
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background-color: #f6fafd;
 }
 
@@ -51,6 +52,10 @@ button {
   padding: 2rem 15%;
 }
 
+@mixin padding-mini {
+  padding: 2rem 10%;
+}
+
 p {
   color: $color-1;
   @include avenir;
@@ -72,3 +77,43 @@ h3,h4 {
   color: $color-2;
   @include helvi;
 }
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(calc(-110%));
+  }
+
+  10% {
+    transform: translateX(calc(-110%));
+  }
+
+  25% {
+    transform: translateX(calc(-220%));
+  }
+
+  35% {
+    transform: translateX(calc(-220%));
+  }
+
+  50% {
+    transform: translateX(calc(-330%));
+  }
+
+  60% {
+    transform: translateX(calc(-330%));
+  }
+
+  75% {
+    transform: translateX(calc(0%));
+  }
+
+  85% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(calc(-110%));
+  }
+}
+
